@@ -22,7 +22,7 @@ for i in range(len(header)):
     pdf.cell(col_widths[i], 10, header[i], 1, 0, 'C', 1)
 pdf.ln()
 
-# Add table content
+# Add data rows to the PDF
 pdf.set_font("Arial", '', 12)
 data = [
     ["1", "1", "Installation and Setup (Odoo)", "6"],
@@ -55,14 +55,14 @@ data = [
     ["", "28", "Assess Integration with Other Modules (Odoo)", "6"],
     ["", "29", "Real-World Case Studies (Odoo)", "6"],
     ["", "30", "Analyze Business Workflows (Odoo)", "6"],
-    ["5", "31", "Final Project Development (Odoo)", "6"],
-    ["", "32", "Optimize Billing Process (Odoo)", "6"],
-    ["", "33", "Seek Feedback on Final Project (Odoo)", "6"],
-    ["", "34", "Adjust Project Based on Feedback", "6"],
-    ["", "35", "Review Notes and Revisit Difficult Areas (Odoo)", "6"],
-    ["", "36", "Clarify Lingering Questions", "6"],
-    ["", "37", "Plan Next Steps for Continuous Learning", "6"],
-    ["", "38", "Final Review and Documentation", "6"],
+    ["5", "31", "User Authentication: Registration & Login (Odoo)", "6"],
+    ["", "32", "Implement Inventory Management Feature (Odoo)", "6"],
+    ["", "33", "Develop Sales Module (Odoo)", "6"],
+    ["", "34", "Implement Reporting Features (Odoo)", "6"],
+    ["", "35", "Optimize Application: Code Review & Testing (Odoo)", "6"],
+    ["", "36", "Prepare Documentation: Setup & Usage (Odoo)", "6"],
+    ["", "37", "Final Review and Project Wrap-Up", "6"],
+    ["", "38", "Plan Next Steps for Continuous Learning", "6"],
 ]
 
 # Add data rows to the PDF
@@ -72,5 +72,7 @@ for row in data:
     pdf.ln()
 
 # Save the PDF to a file
-pdf_output_path = "Odoo_Learning_Plan.pdf"  # Save in the current directory
+pdf_output_path = "Odoo_Learning_Plan.pdf"
 pdf.output(pdf_output_path)
+
+print(f"PDF generated and saved as {pdf_output_path}")
